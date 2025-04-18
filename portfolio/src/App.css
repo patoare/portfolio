@@ -1,0 +1,42 @@
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  background-color: #ffff; /* ejemplo oscuro y semitransparente */
+  opacity: 40%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.cuerpo {
+  background-color: black; /* ejemplo oscuro y semitransparente */
+  opacity: 60%;
+  
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* ocupa toda la pantalla */
+  text-align: center;
+  z-index: 1; /* por encima del video */
+  position: relative;
+  padding-top: 60px; /* si tu navbar es fija, dejá espacio arriba */
+}
