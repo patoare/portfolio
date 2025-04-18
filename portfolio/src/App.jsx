@@ -17,9 +17,8 @@ function App() {
   playsInline
   className="video-background"
 />
-     
+<h1>Bienvenido al portfolio de Patricio Arellano</h1>
   <div className="main-content">
-    <h1>Vite + React</h1>
     <Cuerpo />
   </div>
     </>

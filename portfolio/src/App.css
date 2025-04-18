@@ -1,18 +1,22 @@
+/* General Reset */
 body, html, #root {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
+/* Navbar fija y con fondo semitransparente */
 .nav {
-  background-color: #ffff; /* ejemplo oscuro y semitransparente */
-  opacity: 40%;
+  background-color: #fff;
+  opacity: 0.4;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10; /* por encima del video */
 }
 
+/* Video de fondo */
 .video-background {
   position: fixed;
   top: 0;
@@ -20,23 +24,68 @@ body, html, #root {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  z-index: -1;
+  z-index: 1;
 }
 
-.cuerpo {
-  background-color: black; /* ejemplo oscuro y semitransparente */
-  opacity: 60%;
-  
-}
-
+/* Contenedor principal */
 .main-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* ocupa toda la pantalla */
-  text-align: center;
-  z-index: 1; /* por encima del video */
+  height: 100vh;
   position: relative;
-  padding-top: 60px; /* si tu navbar es fija, dejá espacio arriba */
+  z-index: 2; /* por encima del video */
+  text-align: center;
+  padding-top: 100px; /* espacio para la navbar */
+}
+
+/* Contenido cuerpo */
+.cuerpo {
+  background-color: rgba(0, 0, 0, 0.6); /* con opacidad mejor manejada */
+  color: white;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* Título principal */
+h1 {
+  color: #fff;
+  margin: 0;
+  z-index: 2;
+}
+.custom-card {
+  background-color: rgba(255, 255, 255, 0.85); /* blanco semi */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 350px;
+  margin: 1rem;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top,
+.card-img-bottom {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #333;
 }
